@@ -16,8 +16,16 @@ namespace BethanysPieShop.Controllers
         }
         public IActionResult List()
         {
-            var vm = new ViewModels.PieListViewModel("Cheese cakes", _pieRepository.AllPies);
+            var vm = new ViewModels.PieListViewModel("All pies", _pieRepository.AllPies);
             return View(vm);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var pie = this._pieRepository.GetPieById(id);
+            if (pie == null)
+                return NotFound();
+            return View(pie);
         }
     }
 }
