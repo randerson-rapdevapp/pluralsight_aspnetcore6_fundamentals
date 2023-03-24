@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Pie\List.cshtml" />
+    <None Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
