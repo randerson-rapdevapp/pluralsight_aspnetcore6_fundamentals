@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Order\Checkout.cshtml" />
     <None Include="Views\Pie\List.cshtml" />
     <None Include="Views\ShoppingCart\Index.cshtml" />
     <None Include="wwwroot\lib\bootstrap\css\bootstrap-grid.css.map" />
