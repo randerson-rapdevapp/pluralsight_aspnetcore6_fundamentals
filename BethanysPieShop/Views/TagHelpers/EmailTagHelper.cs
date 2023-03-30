@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BethanysPieShop.Views.Contact.TagHelpers
+namespace BethanysPieShop.Views.TagHelpers
 {
     public class EmailTagHelper : TagHelper
     {
