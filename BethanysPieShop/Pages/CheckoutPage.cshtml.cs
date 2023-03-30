@@ -9,7 +9,7 @@ namespace BethanysPieShop.Pages
         private readonly IOrderRepository _orderRepository;
         private readonly IShoppingCart _shoppingCart;
         [BindProperty]
-        public Order Order { get; set; }
+        public Order Order { get; set; } = default!;
 
         public CheckoutPageModel(IOrderRepository orderRepository, IShoppingCart shoppingCart)
         {
@@ -38,7 +38,7 @@ namespace BethanysPieShop.Pages
             {
                 _orderRepository.CreateOrder(Order);
                 _shoppingCart.ClearCart();
-                return RedirectToPage("CheckoutComplete");
+                return RedirectToPage("CheckoutCompletePage");
             }
 
             return Page();
