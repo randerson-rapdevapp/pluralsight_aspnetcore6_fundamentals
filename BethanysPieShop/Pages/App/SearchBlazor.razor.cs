@@ -11,14 +11,6 @@ namespace BethanysPieShop.Pages.App
         [Inject]
         public IPieRepository? PieRepository { get; set; }
 
-        protected override void OnInitialized()
-        {
-            base.OnInitialized();
-            if (this.PieRepository is not null)
-            {
-                FilteredPies = PieRepository.AllPies.ToList();
-            }
-        }
         private void Search()
         {
             FilteredPies.Clear();
