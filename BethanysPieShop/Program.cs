@@ -20,7 +20,6 @@ builder.Services.AddDbContext<BethanysPieShopDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration["ConnectionStrings:BethanysPieShopDbContextConnection"]);
 });
-
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<BethanysPieShopDbContext>();
 builder.Services.AddServerSideBlazor();
@@ -30,7 +29,8 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
-//app.UseAuthentication();
+app.UseAuthentication();
+app.UseAuthorization();
 
 if (app.Environment.IsDevelopment())
 {
