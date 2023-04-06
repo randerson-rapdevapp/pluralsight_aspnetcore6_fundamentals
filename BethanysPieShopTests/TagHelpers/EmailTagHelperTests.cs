@@ -1,5 +1,4 @@
-﻿using BethanysPieShop.TagHelpers;
-using BethanysPieShop.Views.Contact.TagHelpers;
+﻿using BethanysPieShop.Views.TagHelpers;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Moq;
 using System;

@@ -1,4 +1,5 @@
 using BethanysPieShop.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -19,11 +20,13 @@ builder.Services.AddDbContext<BethanysPieShopDbContext>(options =>
     options.UseSqlServer(builder.Configuration["ConnectionStrings:BethanysPieShopDbContextConnection"]);
 });
 builder.Services.AddServerSideBlazor();
+//builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<BethanysPieShopDbContext>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSession();
+//app.UseAuthentication();
 
 if (app.Environment.IsDevelopment())
 {
